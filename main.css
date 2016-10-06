@@ -1,0 +1,69 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: #2f2f2f;
+    color: #fff;
+}
+
+.aligner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#kana {
+    font-size: 7em;
+    margin: 0;
+    padding-bottom: 50px;
+    -webkit-user-drag: none;
+    user-drag: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+#kana.appear {
+    animation: kana-appear 200ms;
+}
+
+#kana.error {
+    animation: kana-error 500ms;
+}
+
+@keyframes kana-appear {
+    0% {
+        font-size: 100em;
+    }
+    100% {
+        font-size: 7em;
+    }
+}
+
+@keyframes kana-error {
+    0% {
+        color: #fff;
+    }
+    50% {
+        color: #f00;
+    }
+    100% {
+        color: #fff;
+    }
+}
+
+#romaji-input {
+    background: #252525;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: #fff;
+    width: 200px;
+    font-size: 5em;
+    text-align: center;
+}
