@@ -23,8 +23,8 @@ pickRandomKana() {
     return hiraganas[hiraganas.length * Math.random() << 0] // << 0 to make result a integer
 }
 
-isKana(kana) {
-    return hiriganas.indexOf(kana) != -1;
+isKana(char) {
+    return hiriganas.indexOf(char) != -1;
 }
 
 let kana = document.getElementById('kana');
